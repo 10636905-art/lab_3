@@ -3,6 +3,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 void task32(), task39(), task58(), task95(), task43(), task21(), task35(), task91(), task82(), task14();
 
@@ -12,7 +13,7 @@ int main() {
 	srand(time(NULL));
 
 	printf("Мої завдання: ");
-	
+
 	for (N = 1; N <= 10; N++) {
 		int num = ((N * N * N + K * K) % 113) + 1;
 		printf("%d", num);
@@ -25,7 +26,16 @@ int main() {
 		}
 	}
 
-	task32(), task39(), task58(), task95(), task43(), task21(), task35(), task91(), task82(), task14();
+	task32();
+	task39();
+	task58();
+	task95();
+	task43();
+	task21();
+	task35();
+	task91();
+	task82();
+	task14();
 
 	return 0;
 }
@@ -33,7 +43,7 @@ int main() {
 void task32() {
 	printf("\n\nЗавдання 32: Підрахувати кількість цілих серед чисел a, b, c");
 
-	double a = (rand() % 200) / 2.0 - 100, b = (rand() % 200) / 10.0 - 10, c = (rand()% 200) / 3.0 - 30;
+	double a = (rand() % 200) / 2.0 - 100, b = (rand() % 200) / 10.0 - 10, c = (rand() % 200) / 3.0 - 30;
 
 	int numberOfIntegers = 0;
 
@@ -54,7 +64,7 @@ void task32() {
 
 void task39() {
 	printf("\n\nЗавдання 39: Скласти програму, що визначає результат ворожіння на ромашці(<<любить - не любить>>), взявши за вихідну дану кількість пелюстків n");
-	
+
 	int n = (rand() % 100) + 1;
 
 	printf("\n\n    Оскільки пелюстків всього %d, ми маємо результат ворожіння: ", n);
@@ -82,7 +92,7 @@ void task58() {
 		yBA = y1 - y2;
 		xBC = x3 - x2;
 		yBC = y3 - y2;
-		
+
 		printf("\n    Враховуючи це, нам потрібно знайти кут B. Для цього нам знадобляться вектора BA(%.0f, %.0f) і BC(%.0f, %.0f).", xBA, yBA, xBC, yBC);
 
 		productOfVectors = xBA * xBC + yBA * yBC;
@@ -196,7 +206,7 @@ void task21() {
 
 void task35() {
 	printf("\n\nЗавдання 35: Програма — підлабузник. На екрані висвітлюється питання «Хто ти: хлопчик чи дівчинка? Введи Д або М». Залежно від відповіді на екрані має з'явитися текст <<Мені подобаються дівчата!>> або «Мені подобаються хлопчики!».");
-	
+
 	printf("\n    Хто ти: хлопчик чи дівчинка? Введи Д або М. ");
 	char ans[10];
 
